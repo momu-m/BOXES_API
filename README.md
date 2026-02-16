@@ -1,6 +1,7 @@
 # Kisten-Verwaltungs REST-API
 
 Eine vollständige REST-API zur Verwaltung von Kisten mit Standort und Inhalt.
+Erstellt duch Mo, Arjen und Andrin.
 
 ## Projektübersicht
 
