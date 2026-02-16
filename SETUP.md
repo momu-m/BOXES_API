@@ -1,4 +1,4 @@
-# 🚀 Schnellstart-Anleitung
+# Schnellstart-Anleitung
 
 Diese Datei hilft euch, die API schnell in Betrieb zu nehmen.
 
@@ -42,7 +42,7 @@ Ihr solltet sehen:
 Press CTRL+C to quit
 ```
 
-**Der Server läuft jetzt!** ✅
+**Der Server läuft jetzt!** 
 
 ## Schritt 4: API testen
 
@@ -106,9 +106,9 @@ test_boxes_api.py::TestCreateBox::test_create_box_without_location PASSED
 ========================= 25 passed in 2.45s ===========================
 ```
 
-**Alle Tests grün?** ✅ Super, eure API funktioniert!
 
-## 🌐 Im Browser testen (optional)
+
+## Im Browser testen (optional)
 
 Ihr könnt die API auch im Browser testen:
 
@@ -118,7 +118,7 @@ Ihr könnt die API auch im Browser testen:
 
 Ihr seht die JSON-Antwort direkt im Browser!
 
-## 🛠️ Weitere Werkzeuge
+## Weitere Werkzeuge
 
 ### Postman (empfohlen für einfaches Testen)
 
@@ -147,7 +147,7 @@ Content-Type: application/json
 }
 ```
 
-## ❓ Häufige Probleme
+## Häufige Probleme
 
 ### "Port already in use" Fehler
 
@@ -187,15 +187,15 @@ rm boxes.db
 python box_server.py
 ```
 
-## 📚 Nächste Schritte
+## Nächste Schritte
 
-1. ✅ Server gestartet
-2. ✅ Erste API-Calls gemacht
-3. ✅ Tests ausgeführt
-4. 📖 Lest die vollständige Dokumentation in `README.md`
-5. 🎨 Experimentiert mit der API!
+1. Server gestartet
+2. Erste API-Calls gemacht
+3. Tests ausgeführt
+4. Lest die vollständige Dokumentation in `README.md`
+5. Experimentiert mit der API!
 
-## 🎯 Tipps für die Präsentation
+## Tipps für die Präsentation
 
 1. **Startet den Server vorher**: Testet dass alles läuft
 2. **Bereitet Beispiele vor**: Erstellt ein paar Kisten als Demo
@@ -203,10 +203,10 @@ python box_server.py
 4. **Erklärt ein REST-Prinzip**: z.B. HATEOAS mit den `_links`
 5. **Zeigt die Datenbank**: `sqlite3 boxes.db "SELECT * FROM boxes;"`
 
-## 🆘 Hilfe benötigt?
+## Hilfe benötigt?
 
 - README.md lesen: Vollständige Dokumentation
 - Code-Kommentare lesen: Alles ist erklärt
 - Bei Fragen: Dozent fragen
 
-**Viel Erfolg!** 🚀
+**Viel Erfolg!** 

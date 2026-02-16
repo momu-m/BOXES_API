@@ -2,7 +2,7 @@
 
 Eine vollständige REST-API zur Verwaltung von Kisten mit Standort und Inhalt.
 
-## 🎯 Projektübersicht
+## Projektübersicht
 
 Diese API ermöglicht die Verwaltung von Kisten durch:
 - **Erstellen** neuer Kisten mit automatisch generierten Codes
@@ -11,7 +11,7 @@ Diese API ermöglicht die Verwaltung von Kisten durch:
 - **Löschen** von Kisten
 - **Statistiken** über Anzahl und Standorte
 
-## 📋 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Installation und Start](#installation-und-start)
 - [API-Dokumentation](#api-dokumentation)
@@ -22,7 +22,7 @@ Diese API ermöglicht die Verwaltung von Kisten durch:
 
 ---
 
-## 🚀 Installation und Start
+## Installation und Start
 
 ### Voraussetzungen
 
@@ -59,7 +59,7 @@ curl -X POST http://localhost:5000/api/boxes \
 
 ---
 
-## 📖 API-Dokumentation
+## API-Dokumentation
 
 ### Basis-URL
 
@@ -271,11 +271,11 @@ GET /api/boxes/stats
 
 ---
 
-## 🎨 REST-Prinzipien
+## REST-Prinzipien
 
 Diese API implementiert alle geforderten REST-Prinzipien vollständig:
 
-### 1. Zustandslosigkeit (5 Punkte) ✅
+### 1. Zustandslosigkeit
 
 **Implementierung:**
 - Server speichert **keine** Session-Daten zwischen Requests
@@ -291,7 +291,7 @@ GET /api/boxes/AB12  # Request 2 - Server "erinnert" sich nicht an Request 1
 
 ---
 
-### 2. Caching (5 Punkte) ✅
+### 2. Caching 
 
 **Implementierung:**
 - **ETag Header**: Eindeutiger Hash-Wert der Daten für Versionierung
@@ -320,7 +320,7 @@ curl -i -H 'If-None-Match: "abc123"' http://localhost:5000/api/boxes
 
 ---
 
-### 3. Identification of Resources (5 Punkte) ✅
+### 3. Identification of Resources
 
 **Implementierung:**
 - Eindeutige URLs für jede Ressource
@@ -337,7 +337,7 @@ curl -i -H 'If-None-Match: "abc123"' http://localhost:5000/api/boxes
 
 ---
 
-### 4. Manipulation through Representations (5 Punkte) ✅
+### 4. Manipulation through Representations 
 
 **Implementierung:**
 - **JSON Format** für alle Daten
@@ -368,7 +368,7 @@ Content-Type: application/json
 
 ---
 
-### 5. Self-Descriptive Messages (10 Punkte) ✅
+### 5. Self-Descriptive Messages
 
 **Implementierung:**
 - **Korrekte HTTP-Methoden:**
@@ -402,7 +402,7 @@ def create_box():
 
 ---
 
-### 6. HATEOAS - Hypermedia as Engine of Application State (10 Punkte) ✅
+### 6. HATEOAS - Hypermedia as Engine of Application State 
 
 **Implementierung:**
 - Jede Response enthält `_links` mit verwandten Ressourcen
@@ -452,7 +452,7 @@ Ein Client kann alle verfügbaren Aktionen aus den Links ablesen, ohne die API-D
 
 ---
 
-## 🗄️ Datenbank-Struktur
+## Datenbank-Struktur
 
 ### Technologie
 - **SQLite**: Leichtgewichtige, dateibasierte relationale Datenbank
@@ -495,7 +495,7 @@ Der CODE wird automatisch generiert:
 
 ---
 
-## 🧪 Tests ausführen
+## Tests ausführen
 
 ### Voraussetzungen
 
@@ -554,7 +554,7 @@ test_boxes_api.py::TestRESTPrinciples::test_hateoas_links_consistency PASSED   [
 
 ---
 
-## 📝 Beispiele
+## Beispiele
 
 ### Beispiel-Workflow: Umzug einer Kiste
 
@@ -598,7 +598,7 @@ for box in kitchen_boxes:
 
 ---
 
-## 🛠️ Technologie-Stack
+## Technologie-Stack
 
 - **Python 3.10**: Programmiersprache
 - **Flask**: Web-Framework für die API
@@ -608,21 +608,21 @@ for box in kitchen_boxes:
 
 ---
 
-## 📊 Bewertung nach Kriterien
+## Bewertung nach Kriterien
 
 | Kriterium | Punkte | Status |
 |-----------|--------|--------|
-| REST: Zustandslosigkeit | 5 | ✅ Implementiert |
-| REST: Caching | 5 | ✅ ETag, Cache-Control |
-| REST: Identification of Resources | 5 | ✅ Eindeutige URLs |
-| REST: Manipulation through Representations | 5 | ✅ JSON Format |
-| REST: Self-Descriptive Messages | 10 | ✅ HTTP-Methoden, Status Codes |
-| REST: HATEOAS | 10 | ✅ _links in allen Responses |
-| Datenbank: Persistierung | 10 | ✅ SQLite |
-| Testing: Vollständige Tests | 10 | ✅ 25+ Tests |
-| CRUD: Vollständigkeit | 10 | ✅ Alle Operationen |
-| Dokumentation: README | 10 | ✅ Dieses Dokument |
-| **GESAMT** | **80** | **✅ Vollständig** |
+| REST: Zustandslosigkeit | 5 | Implementiert |
+| REST: Caching | 5 | ETag, Cache-Control |
+| REST: Identification of Resources | 5 | Eindeutige URLs |
+| REST: Manipulation through Representations | 5 | JSON Format |
+| REST: Self-Descriptive Messages | 10 | HTTP-Methoden, Status Codes |
+| REST: HATEOAS | 10 | _links in allen Responses |
+| Datenbank: Persistierung | 10 | SQLite |
+| Testing: Vollständige Tests | 10 | 25+ Tests |
+| CRUD: Vollständigkeit | 10 | Alle Operationen |
+| Dokumentation: README | 10 | Dieses Dokument |
+| **GESAMT** | **80** | **Vollständig** |
 
 ---
 
@@ -632,7 +632,7 @@ for box in kitchen_boxes:
 
 ---
 
-## 📅 Projekt-Informationen
+## Projekt-Informationen
 
 - **Kurs**: Datenvernetzung in DB und Web
 - **Abgabedatum**: 15. März 2026
@@ -640,7 +640,7 @@ for box in kitchen_boxes:
 
 ---
 
-## 🤖 Verwendung von KI
+## Verwendung von KI
 
 Bei der Entwicklung dieser API wurde KI (Claude) als Lernhilfe verwendet für:
 - Verständnis von REST-Prinzipien
@@ -652,7 +652,7 @@ Alle generierten Inhalte wurden von uns geprüft, verstanden und angepasst.
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Q: Warum SQLite statt MySQL/PostgreSQL?**
 A: SQLite ist einfacher einzurichten (keine Server notwendig) und perfekt für kleinere Projekte. Für produktive Anwendungen würde man zu MySQL/PostgreSQL wechseln.
@@ -667,5 +667,3 @@ A: Ja! Content ist ein Textfeld, ihr könnt Inhalte mit Komma trennen: "Teller, 
 A: Einfach die Datei `boxes.db` löschen. Beim nächsten Start wird sie neu erstellt.
 
 ---
-
-**Viel Erfolg mit eurer Kisten-Verwaltung! 📦**
