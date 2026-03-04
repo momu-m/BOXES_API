@@ -680,3 +680,9 @@ A: Ja! Content ist ein Textfeld, ihr könnt Inhalte mit Komma trennen: "Teller, 
 A: Einfach die Datei `boxes.db` löschen. Beim nächsten Start wird sie neu erstellt.
 
 ---
+
+## Quellen und Referenzen
+* Flask Offizielle Dokumentation
+* REST-API Lernmaterialien
+* SQLite Dokumentation
+* Flasgger/Swagger Dokumentation
