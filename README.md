@@ -682,7 +682,7 @@ A: Einfach die Datei `boxes.db` löschen. Beim nächsten Start wird sie neu erst
 ---
 
 ## Quellen und Referenzen
-* Flask Offizielle Dokumentation
-* REST-API Lernmaterialien
-* SQLite Dokumentation
-* Flasgger/Swagger Dokumentation
+* [Flask Offizielle Dokumentation](https://flask.palletsprojects.com/)
+* [The Little Book on REST Services (Kenneth Lange)](https://www.kennethlange.com/books/The-Little-Book-on-REST-Services.pdf)
+* [SQLite Dokumentation](https://www.sqlite.org/docs.html)
+* [Swagger Dokumentation](https://swagger.io/docs/)
