@@ -42,7 +42,7 @@ pip install flask requests pytest
 python box_server.py
 ```
 
-Der Server läuft nun auf: `http://localhost:5000`
+Der Server läuft nun auf: `http://localhost:5001`
 
 ### Schritt 3: API testen
 
@@ -50,13 +50,25 @@ In einem neuen Terminal:
 
 ```bash
 # Alle Kisten abrufen
-curl http://localhost:5000/api/boxes
+curl http://localhost:5001/api/boxes
 
 # Neue Kiste erstellen
-curl -X POST http://localhost:5000/api/boxes \
+curl -X POST http://localhost:5001/api/boxes \
   -H "Content-Type: application/json" \
   -d '{"Location": "Küche", "Content": "Teller, Tassen"}'
 ```
+
+---
+
+## Swagger UI (Interaktive Dokumentation)
+
+Nach dem Starten des Servers ist die interaktive Swagger UI erreichbar unter:
+
+```
+http://localhost:5001/apidocs
+```
+
+Dort kann man alle Endpunkte direkt im Browser testen, ohne Curl oder Postman zu brauchen.
 
 ---
 
@@ -65,7 +77,7 @@ curl -X POST http://localhost:5000/api/boxes \
 ### Basis-URL
 
 ```
-http://localhost:5000/api/boxes
+http://localhost:5001/api/boxes
 ```
 
 ### Endpunkte
@@ -311,11 +323,11 @@ def add_cache_headers(response, etag, max_age=60):
 **Verwendung:**
 ```bash
 # Erste Anfrage
-curl -i http://localhost:5000/api/boxes
+curl -i http://localhost:5001/api/boxes
 # Header: ETag: "abc123"
 
 # Zweite Anfrage mit ETag
-curl -i -H 'If-None-Match: "abc123"' http://localhost:5000/api/boxes
+curl -i -H 'If-None-Match: "abc123"' http://localhost:5001/api/boxes
 # Response: 304 Not Modified (keine Daten übertragen, spart Bandbreite)
 ```
 
@@ -561,24 +573,24 @@ test_boxes_api.py::TestRESTPrinciples::test_hateoas_links_consistency PASSED   [
 
 ```bash
 # 1. Neue Kiste erstellen
-curl -X POST http://localhost:5000/api/boxes \
+curl -X POST http://localhost:5001/api/boxes \
   -H "Content-Type: application/json" \
   -d '{"Location": "Wohnzimmer", "Content": "Bücher, DVDs"}'
 
 # Response: {"CODE": "AB12", ...}
 
 # 2. Kiste ins Arbeitszimmer verschieben
-curl -X PUT http://localhost:5000/api/boxes/AB12 \
+curl -X PUT http://localhost:5001/api/boxes/AB12 \
   -H "Content-Type: application/json" \
   -d '{"Location": "Arbeitszimmer"}'
 
 # 3. Inhalt ergänzen
-curl -X PUT http://localhost:5000/api/boxes/AB12 \
+curl -X PUT http://localhost:5001/api/boxes/AB12 \
   -H "Content-Type: application/json" \
   -d '{"Content": "Bücher, DVDs, Notizblöcke"}'
 
 # 4. Kiste später löschen
-curl -X DELETE http://localhost:5000/api/boxes/AB12
+curl -X DELETE http://localhost:5001/api/boxes/AB12
 ```
 
 ### Beispiel: Alle Kisten in der Küche finden
@@ -587,7 +599,7 @@ curl -X DELETE http://localhost:5000/api/boxes/AB12
 import requests
 
 # Alle Kisten abrufen
-response = requests.get('http://localhost:5000/api/boxes')
+response = requests.get('http://localhost:5001/api/boxes')
 all_boxes = response.json()['boxes']
 
 # Nach Küche filtern
@@ -627,9 +639,9 @@ for box in kitchen_boxes:
 
 ---
 
-## 👥 Team
+## Team
 
-[Eure Namen hier eintragen]
+Mo, Arjen und Andrin
 
 ---
 
@@ -637,7 +649,7 @@ for box in kitchen_boxes:
 
 - **Kurs**: Datenvernetzung in DB und Web
 - **Abgabedatum**: 15. März 2026
-- **Repository**: [Git-Link hier einfügen]
+- **Repository**: https://github.com/momu-m/BOXES_API
 
 ---
 

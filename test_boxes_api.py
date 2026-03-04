@@ -10,7 +10,7 @@ import pytest
 import requests
 import time
 
-BASE_URL = "http://localhost:5000"
+BASE_URL = "http://localhost:5001"
 API_PATH = "/api/boxes"
 
 
@@ -426,12 +426,12 @@ class TestRESTPrinciples:
         
         # Teste ob self-Link funktioniert
         self_link = result['_links']['self']['href']
-        self_response = requests.get(f"http://localhost:5000{self_link}")
+        self_response = requests.get(f"http://localhost:5001{self_link}")
         assert self_response.status_code == 200
         
         # Teste ob collection-Link funktioniert
         collection_link = result['_links']['collection']['href']
-        collection_response = requests.get(f"http://localhost:5000{collection_link}")
+        collection_response = requests.get(f"http://localhost:5001{collection_link}")
         assert collection_response.status_code == 200
 
 
@@ -441,6 +441,6 @@ class TestRESTPrinciples:
 
 if __name__ == '__main__':
     print("Starte Tests...")
-    print("Stelle sicher, dass der Server läuft auf http://localhost:5000")
+    print("Stelle sicher, dass der Server läuft auf http://localhost:5001")
     print()
     pytest.main([__file__, '-v'])

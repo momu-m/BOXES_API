@@ -51,7 +51,7 @@ Press CTRL+C to quit
 ### Test 1: Alle Kisten abrufen (noch leer)
 
 ```bash
-curl http://localhost:5000/api/boxes
+curl http://localhost:5001/api/boxes
 ```
 
 Antwort sollte sein:
@@ -66,7 +66,7 @@ Antwort sollte sein:
 ### Test 2: Erste Kiste erstellen
 
 ```bash
-curl -X POST http://localhost:5000/api/boxes \
+curl -X POST http://localhost:5001/api/boxes \
   -H "Content-Type: application/json" \
   -d '{"Location": "Küche", "Content": "Teller, Tassen"}'
 ```
@@ -86,7 +86,7 @@ Antwort:
 Ersetzt `AB12` mit eurem CODE:
 
 ```bash
-curl http://localhost:5000/api/boxes/AB12
+curl http://localhost:5001/api/boxes/AB12
 ```
 
 ## Schritt 5: Tests ausführen
@@ -114,7 +114,7 @@ Ihr könnt die API auch im Browser testen:
 
 1. Server starten: `python box_server.py`
 2. Browser öffnen
-3. URL eingeben: `http://localhost:5000/api/boxes`
+3. URL eingeben: `http://localhost:5001/api/boxes`
 
 Ihr seht die JSON-Antwort direkt im Browser!
 
@@ -125,8 +125,8 @@ Ihr seht die JSON-Antwort direkt im Browser!
 1. Ladet Postman herunter: https://www.postman.com/downloads/
 2. Erstellt eine neue Collection "Boxes API"
 3. Fügt Requests hinzu:
-   - GET `http://localhost:5000/api/boxes`
-   - POST `http://localhost:5000/api/boxes`
+   - GET `http://localhost:5001/api/boxes`
+   - POST `http://localhost:5001/api/boxes`
    - usw.
 
 ### VS Code REST Client Extension
@@ -135,10 +135,10 @@ Wenn ihr VS Code nutzt, könnt ihr die "REST Client" Extension installieren und 
 
 ```http
 ### Get all boxes
-GET http://localhost:5000/api/boxes
+GET http://localhost:5001/api/boxes
 
 ### Create box
-POST http://localhost:5000/api/boxes
+POST http://localhost:5001/api/boxes
 Content-Type: application/json
 
 {
