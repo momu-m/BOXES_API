@@ -38,7 +38,7 @@ python box_server.py
 Ihr solltet sehen:
 
 ```
- * Running on http://0.0.0.0:5000
+ * Running on http://0.0.0.0:5001
 Press CTRL+C to quit
 ```
 
@@ -156,7 +156,7 @@ Wenn ihr diese Fehlermeldung seht:
 OSError: [Errno 48] Address already in use
 ```
 
-**Lösung**: Ein anderer Prozess nutzt Port 5000. Entweder:
+**Lösung**: Ein anderer Prozess nutzt Port 5001. Entweder:
 1. Den anderen Prozess stoppen
 2. Oder den Port in `box_server.py` ändern (Zeile ganz unten):
    ```python
