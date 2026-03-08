@@ -641,7 +641,8 @@ for box in kitchen_boxes:
 
 ## Team
 
-Mo, Arjen und Andrin
+Mohamad Murad, Arjen Hoti, Andrin Luethi
+
 
 ---
 
@@ -662,6 +663,8 @@ Bei der Entwicklung dieser API wurde KI (Claude) als Lernhilfe verwendet für:
 - Dokumentation
 
 Alle generierten Inhalte wurden von uns geprüft, verstanden und angepasst.
+
+KI wurde generell als Hilfsmittel verwendet – sowohl zur Codegenerierung als auch als interaktiver Mentor für technische Entscheidungen (z.B. „Welche Methode eignet sich am besten für ETag-Implementierung?", „Was sind Alternativen zu X?"). Diese Nutzungsweise ist vergleichbar mit der Konsultation von Dokumentationen, Stack Overflow oder einem erfahrenen Kollegen.. Die ensprechenden Quellen sind anschliessend im [Quellenverzeichnis](Quellenverzeichnis.md) (Notion und anschliessender Github Import) hinterlegt.
 
 ---
 
