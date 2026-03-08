@@ -621,24 +621,6 @@ for box in kitchen_boxes:
 
 ---
 
-## Bewertung nach Kriterien
-
-| Kriterium | Punkte | Status |
-|-----------|--------|--------|
-| REST: Zustandslosigkeit | 5 | Implementiert |
-| REST: Caching | 5 | ETag, Cache-Control |
-| REST: Identification of Resources | 5 | Eindeutige URLs |
-| REST: Manipulation through Representations | 5 | JSON Format |
-| REST: Self-Descriptive Messages | 10 | HTTP-Methoden, Status Codes |
-| REST: HATEOAS | 10 | _links in allen Responses |
-| Datenbank: Persistierung | 10 | SQLite |
-| Testing: Vollständige Tests | 10 | 25+ Tests |
-| CRUD: Vollständigkeit | 10 | Alle Operationen |
-| Dokumentation: README | 10 | Dieses Dokument |
-| **GESAMT** | **80** | **Vollständig** |
-
----
-
 ## Team
 
 Mohamad Murad, Arjen Hoti, Andrin Luethi
