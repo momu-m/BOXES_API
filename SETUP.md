@@ -1,10 +1,10 @@
 # Schnellstart-Anleitung
 
-Diese Datei hilft euch, die API schnell in Betrieb zu nehmen.
+Diese Datei hilft, die API schnell in Betrieb zu nehmen.
 
 ## Schritt 1: Dateien prüfen
 
-Stellt sicher, dass ihr folgende Dateien habt:
+Sicherstellen dass folgende Daten verfügbar sind:
 
 ```
 euer-projekt/

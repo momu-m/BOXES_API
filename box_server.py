@@ -1,9 +1,6 @@
 """
 REST API Server fuer Kisten-Verwaltung
-Implementiert alle REST-Prinzipien:
-- Zustandslosigkeit
-- Caching
-- Uniform Interface (Identification, Manipulation, Self-Descriptive, HATEOAS)
+Autoren: Mohamad Murad, Arjen Hoti, Andrin Luethi
 
 Swagger UI ist erreichbar unter: http://localhost:5001/apidocs
 """

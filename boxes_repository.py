@@ -1,6 +1,8 @@
 """
 Repository für Kisten-Verwaltung
 Verwaltet alle Datenbank-Operationen für Kisten
+Autoren: Mohamad Murad, Arjen Hoti, Andrin Luethi
+
 """
 import sqlite3
 import random

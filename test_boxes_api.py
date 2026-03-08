@@ -1,5 +1,6 @@
 """
 Tests für die Boxes REST API
+Autoren: Mohamad Murad, Arjen Hoti, Andrin Luethi
 
 Diese Tests prüfen:
 - Alle CRUD-Operationen (Create, Read, Update, Delete)
