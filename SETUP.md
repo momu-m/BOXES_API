@@ -18,7 +18,7 @@ euer-projekt/
 
 ## Schritt 2: Python-Pakete installieren
 
-Öffnet ein Terminal im Projekt-Ordner und führt aus:
+Terminal im Projektordner öffnen und folgendes ausführen:
 
 ```bash
 pip install -r requirements.txt
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 python box_server.py
 ```
 
-Ihr solltet sehen:
+Folgendes sollte sichtbar sein:
 
 ```
  * Running on http://0.0.0.0:5001
@@ -46,7 +46,7 @@ Press CTRL+C to quit
 
 ## Schritt 4: API testen
 
-Öffnet einen **neuen Terminal-Tab** (Server muss weiterlaufen!) und probiert:
+Öffnen eines **neuen Terminal-Tab** (Server muss weiterlaufen!) und folgendes testen:
 
 ### Test 1: Alle Kisten abrufen (noch leer)
 
@@ -97,7 +97,7 @@ Im **zweiten Terminal** (Server läuft noch im ersten!):
 pytest test_boxes_api.py -v
 ```
 
-Ihr solltet sehen:
+Folgendes sollte sichtbar sein:
 ```
 ========================= test session starts ==========================
 test_boxes_api.py::TestCreateBox::test_create_box_with_all_data PASSED
@@ -110,28 +110,28 @@ test_boxes_api.py::TestCreateBox::test_create_box_without_location PASSED
 
 ## Im Browser testen (optional)
 
-Ihr könnt die API auch im Browser testen:
+Im Browser kann die API ebenfalls getestet werden:
 
 1. Server starten: `python box_server.py`
 2. Browser öffnen
 3. URL eingeben: `http://localhost:5001/api/boxes`
 
-Ihr seht die JSON-Antwort direkt im Browser!
+Sichtbare JSON-Antwort direkt im Browser!
 
 ## Weitere Werkzeuge
 
 ### Postman (empfohlen für einfaches Testen)
 
-1. Ladet Postman herunter: https://www.postman.com/downloads/
-2. Erstellt eine neue Collection "Boxes API"
-3. Fügt Requests hinzu:
+1. Postman herunterladen: https://www.postman.com/downloads/
+2. Erstellen einer neue Collection "Boxes API"
+3. Requests hinzufügen:
    - GET `http://localhost:5001/api/boxes`
    - POST `http://localhost:5001/api/boxes`
    - usw.
 
 ### VS Code REST Client Extension
 
-Wenn ihr VS Code nutzt, könnt ihr die "REST Client" Extension installieren und eine Datei `requests.http` erstellen:
+Bei verwendung von VS Code "REST Client" Extension installieren und eine Datei `requests.http` erstellen:
 
 ```http
 ### Get all boxes
@@ -151,7 +151,7 @@ Content-Type: application/json
 
 ### "Port already in use" Fehler
 
-Wenn ihr diese Fehlermeldung seht:
+Bei folgender Fehlermeldung:
 ```
 OSError: [Errno 48] Address already in use
 ```
@@ -165,48 +165,24 @@ OSError: [Errno 48] Address already in use
 
 ### "ModuleNotFoundError: No module named 'flask'"
 
-**Lösung**: Ihr habt die Pakete noch nicht installiert:
+**Lösung**: Pakete noch nicht installiert:
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Tests schlagen fehl mit "Connection refused"
 
-**Lösung**: Der Server läuft nicht. Startet ihn in einem separaten Terminal:
+**Lösung**: Der Server läuft nicht. In einem separaten Terminal starten:
 ```bash
 python box_server.py
 ```
 
 ### Datenbank löschen/zurücksetzen
 
-Wenn ihr die Datenbank zurücksetzen wollt:
+Zurücksetzen der Datenbank:
 ```bash
 # Server stoppen (CTRL+C)
 rm boxes.db
 # Server neu starten
 python box_server.py
 ```
-
-## Nächste Schritte
-
-1. Server gestartet
-2. Erste API-Calls gemacht
-3. Tests ausgeführt
-4. Lest die vollständige Dokumentation in `README.md`
-5. Experimentiert mit der API!
-
-## Tipps für die Präsentation
-
-1. **Startet den Server vorher**: Testet dass alles läuft
-2. **Bereitet Beispiele vor**: Erstellt ein paar Kisten als Demo
-3. **Zeigt die Tests**: `pytest test_boxes_api.py -v` ist beeindruckend
-4. **Erklärt ein REST-Prinzip**: z.B. HATEOAS mit den `_links`
-5. **Zeigt die Datenbank**: `sqlite3 boxes.db "SELECT * FROM boxes;"`
-
-## Hilfe benötigt?
-
-- README.md lesen: Vollständige Dokumentation
-- Code-Kommentare lesen: Alles ist erklärt
-- Bei Fragen: Dozent fragen
-
-**Viel Erfolg!** 
